@@ -18,7 +18,7 @@ export default function StatisticScreen() {
 
               <View style={styles.StatisticContainner}>
 
-               <Text style = {styles.StatisticText} >Hellowaraporn</Text>
+               <Text style = {styles.StatisticText} >StatisticScreen</Text>
 
               </View>
         </ScrollView>
