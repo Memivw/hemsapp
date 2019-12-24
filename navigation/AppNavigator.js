@@ -1,4 +1,3 @@
-import React from 'react';
 import { Platform, Dimensions } from 'react-native';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -7,10 +6,12 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import LoginScreen  from '../screens/LoginScreen';
 import MainTabNavigator from './MainTabNavigator';
-import SideMenu from '../screens/SideMenu';
-import { createDrawerNavigator } from 'react-navigation-drawer';
+import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
 import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
+import HomeScreen from '../screens/HomeScreen';
+import { View } from 'native-base';
+import { SideMenu } from './SideMenu';
 
 const navOptionHandler = (navigation) => ({
   header:null
@@ -31,11 +32,11 @@ const MainStack = createStackNavigator({
     screen:SettingsScreen,
     navigationOptions:navOptionHandler,
   },
-},{initialRouteName:'Home'})
-
+},{initialRouteName:'Home'}
+)
 const appDrawer = createDrawerNavigator(
   {
-    drawer:MainStack
+    drawer:MainStack,
   },
   {
     contentComponent:SideMenu,
@@ -43,11 +44,7 @@ const appDrawer = createDrawerNavigator(
   }
 )
 const MainApp = createSwitchNavigator({
-    // You could add another route here for authentication.
-    // Read more at https://reactnavigation.org/docs/en/auth-flow.html
-
    // Login: LoginStack,
-
     app:appDrawer,
   },
   {

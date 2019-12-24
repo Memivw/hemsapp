@@ -7,14 +7,20 @@ import {
 } from 'react-native';
 import{Text,List, ListItem} from 'native-base'; 
 export class SideMenu extends React.Component{
-    constructor(props){
-        super(props)
-    }
-
-    render(){
+    render() {
         return (
-            <SafeAreaView >
-                <text>Test</text>
+            <SafeAreaView style={{flex:1}}>
+             <ScrollView>
+                 <List>
+                     <ListItem>
+                         <Text>Setting</Text>
+                     </ListItem>
+                     <ListItem>
+                         <Text>Profile</Text>
+                     </ListItem>
+                 </List>
+             </ScrollView>
+
             </SafeAreaView>
         )
     }
