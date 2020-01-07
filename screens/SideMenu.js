@@ -12,7 +12,7 @@ export class SideMenu extends React.Component{
             <SafeAreaView style={{flex:1}}>
              <ScrollView>
                  <List>
-                     <ListItem>
+                     <ListItem onPress={()=> this.props.navigation.navigate('Profile')}>
                          <Text>Setting</Text>
                      </ListItem>
                      <ListItem>

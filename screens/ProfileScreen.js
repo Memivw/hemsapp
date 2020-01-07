@@ -15,8 +15,7 @@ export default function ProfileScreen() {
           <View style={{flex:1,justifyContent:'center',alignContent:'center'}}>
             <Text>Profile Screen</Text>
           </View>
-        </ScrollView>
-         
+        </ScrollView>       
     </View>
   );
 }

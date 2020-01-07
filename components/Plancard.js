@@ -9,16 +9,14 @@ import {
   View,
 } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph ,IconButton} from 'react-native-paper';//npm i react-native-paper
-import Plancard from '../components/Plancard';
 import { Icon } from 'react-native-elements'
 import { CardItem,Left,Body,Right} from 'native-base';
-class PlanScreen extends Component {
-  render(){
+export default function Plancard() {
     return (
-      <View style={{padding:10}} >
+          <View style={{padding:10}} >
               <Card style={{elevation:2}} >
                 <View >
-                     <CardItem button onPress={() => {this.props.navigation.navigate('Plandetail')}}>
+                     <CardItem button onPress={() => {this.props.navigation.navigate('Plan')}}>
                       <Left>
                             <Body>
                                 <Text>Plan 1</Text>
@@ -37,8 +35,3 @@ class PlanScreen extends Component {
           </View>
   );
 }
-}
-export default PlanScreen;
-PlanScreen.navigationOptions = {
-    title: 'Plan',
-};

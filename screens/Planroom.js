@@ -1,25 +1,23 @@
-import * as React from 'react';
-
+import React, { Component } from 'react';
 import {
-    Image,
-    Platform,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-  } from 'react-native';
-import { Avatar, Button, Card, Title, Paragraph ,IconButton,Switch} from 'react-native-paper';
+  Image,
+  Platform,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+import{Header,Left,Right,Body,CardItem} from 'native-base'
+import { Avatar, Button, Card, Title, Paragraph ,IconButton} from 'react-native-paper';//npm i react-native-paper
 import { Icon } from 'react-native-elements'
-import { CardItem,Left,Body} from 'native-base';
-class DeviceScreen extends React.Component {
+class Planroom extends Component {
   render(){
     return (
       <View style={{flex:1}}>
-      
-       <ScrollView>
-        <View >
-          <View style={{padding:10}} >
+        
+        <ScrollView>
+        <View style={{padding:10}} >
             <Text>Living room</Text>
             <View style={{padding:10}} >
             <Card>
@@ -63,18 +61,10 @@ class DeviceScreen extends React.Component {
               </View>
             </View>
 
-         </View>
         </ScrollView>
-       
-       </View>
-   );
+         
+      </View>
+     );
   }
 }
-export default DeviceScreen;
-DeviceScreen.navigationOptions = {
-  title: 'Device',
-  headerStyle:{
-    backgroundColor: '#fff',
-    
-  },
-};
+export default Planroom;

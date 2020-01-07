@@ -8,6 +8,8 @@ import HomeScreen from '../screens/HomeScreen';
 import PlanScreen from '../screens/PlanScreen';
 import DeviceScreen from '../screens/DeviceScreen';
 import StatisticScreen from '../screens/StatisticScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+import SettingsScreen from '../screens/SettingsScreen';
 
 
 const config = Platform.select({
@@ -82,7 +84,6 @@ StatisticStack.navigationOptions = {
 };
 
 StatisticStack.path = '';
-
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   PlanStack,

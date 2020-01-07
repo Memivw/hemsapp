@@ -9,15 +9,13 @@ import MainTabNavigator from './MainTabNavigator';
 import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
 import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-import HomeScreen from '../screens/HomeScreen';
-import { View } from 'native-base';
 import { SideMenu } from './SideMenu';
-
+import Plandetail from '../screens/Plandetail';
 const navOptionHandler = (navigation) => ({
   header:null
 })
 const MainStack = createStackNavigator({
-  Home :
+  Main :
   {
     screen: MainTabNavigator,
     navigationOptions:navOptionHandler,
@@ -32,8 +30,16 @@ const MainStack = createStackNavigator({
     screen:SettingsScreen,
     navigationOptions:navOptionHandler,
   },
-},{initialRouteName:'Home'}
+  Plandetail :
+  {
+    screen:Plandetail,
+    navigationOptions:navOptionHandler,
+  }
+},{initialRouteName:'Main'}
 )
+
+
+
 const appDrawer = createDrawerNavigator(
   {
     drawer:MainStack,
