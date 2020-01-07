@@ -15,7 +15,6 @@ class Planroom extends Component {
   render(){
     return (
       <View style={{flex:1}}>
-        
         <ScrollView>
         <View style={{padding:10}} >
             <Text>Living room</Text>
@@ -32,6 +31,11 @@ class Planroom extends Component {
                        <Text note>total : 4 hr</Text>
                        </Body>
                    </Left>
+                   <Right>
+                     <Body>
+                       <Text> 08.00 - 12.00</Text>
+                     </Body>
+                   </Right>
                  </CardItem>
                  <CardItem>
                   <Left>
@@ -44,6 +48,11 @@ class Planroom extends Component {
                        <Text note>total : 2 hr</Text>
                        </Body>
                    </Left>
+                   <Right>
+                     <Body>
+                       <Text> 08.00 - 12.00</Text>
+                     </Body>
+                   </Right>
                  </CardItem>
                  <CardItem>
                   <Left>
@@ -56,6 +65,11 @@ class Planroom extends Component {
                        <Text note>total : 2 hr</Text>
                        </Body>
                    </Left>
+                   <Right>
+                     <Body>
+                       <Text> 08.00 - 12.00</Text>
+                     </Body>
+                   </Right>
                  </CardItem>
                </Card>
               </View>

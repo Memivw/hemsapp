@@ -9,6 +9,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import Graph from './Graph';
 export default function StatisticScreen() {
     return (
       <View style={styles.container}>
@@ -19,6 +20,10 @@ export default function StatisticScreen() {
               <View style={styles.StatisticContainner}>
 
                <Text style = {styles.StatisticText} >StatisticScreen</Text>
+               <View>
+                 <Graph/>
+               </View>
+
 
               </View>
         </ScrollView>

@@ -9,15 +9,25 @@ import {
   View,
 } from 'react-native';
 import { Container, Header, Left, Body, Right, Button, Icon, Title,Tab,Tabs } from 'native-base';
+import { createStackNavigator } from 'react-navigation-stack';
 import Planroom from '../screens/Planroom';
+import Plangraph from '../screens/Plangraph';
+import PlanScreen from '../screens/PlanScreen';
+
+const  PlanStack = createStackNavigator(
+  {
+    Plan:  PlanScreen,
+  },
+);
 class Plandetail extends Component {
   render() {
     return (
       <Container>
         <Header hasTabs >
           <Left>
-            <Button transparent>
-              <Icon name='arrow-back' />
+            <Button transparent onPress={()=>this.props.navigation.navigate("Plan")}>
+              <Icon name='arrow-back' >
+              </Icon>
               <Text>Back</Text>
             </Button>
           </Left>          
@@ -35,7 +45,7 @@ class Plandetail extends Component {
             <Planroom />
           </Tab>
           <Tab heading="Graph">
-            <Planroom/>
+            <Plangraph/>
           </Tab>
         </Tabs>
 
