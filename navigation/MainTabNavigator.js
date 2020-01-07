@@ -11,6 +11,9 @@ import StatisticScreen from '../screens/StatisticScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
+const navOptionHandler = (navigation) => ({
+  header:null
+})
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -66,12 +69,13 @@ DeviceStack.navigationOptions = {
 };
 
 DeviceStack.path = '';
-const StatisticStack = createStackNavigator(
+const StatisticStack = createStackNavigator({
+  Statistic :
   {
-    Statistic: StatisticScreen,
+    screen: StatisticScreen,
+    navigationOptions:navOptionHandler,
   },
-  config
-);
+})
 
 StatisticStack.navigationOptions = {
   tabBarLabel: 'Statistic',
@@ -81,6 +85,7 @@ StatisticStack.navigationOptions = {
     
     />
   ),
+  header:null,
 };
 
 StatisticStack.path = '';

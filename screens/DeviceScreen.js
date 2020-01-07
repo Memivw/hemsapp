@@ -9,14 +9,20 @@ import {
     TouchableOpacity,
     View,
   } from 'react-native';
-import { Avatar, Button, Card, Title, Paragraph ,IconButton,Switch} from 'react-native-paper';
-import { Icon } from 'react-native-elements'
-import { CardItem,Left,Body} from 'native-base';
+import { Avatar, Card, Paragraph ,IconButton} from 'react-native-paper';
+import { CardItem,Left,Body,Switch, Right, Header, Button, Icon, Title } from 'native-base';
 class DeviceScreen extends React.Component {
+  state = {switchValue:true}
+  toggleSwitch = (value) => {
+      //onValueChange of the switch this function will be called
+      this.setState({switchValue: value})
+      //state changes according to switch
+      //which will result in re-render the text
+   }
+
   render(){
     return (
       <View style={{flex:1}}>
-      
        <ScrollView>
         <View >
           <View style={{padding:10}} >
@@ -26,7 +32,6 @@ class DeviceScreen extends React.Component {
                <CardItem>
                   <Left>
                      <Icon name='ios-bulb'
-                      type='ionicon' 
                       size ={50}
                       />
                      <Body>
@@ -34,11 +39,14 @@ class DeviceScreen extends React.Component {
                        <Text note>total : 4 hr</Text>
                        </Body>
                    </Left>
+                   <Right>
+                      <Switch onValueChange = {this.toggleSwitch1}
+                         value = {this.state.switchValue}/>
+                   </Right>
                  </CardItem>
                  <CardItem>
                   <Left>
-                     <Icon name='ios-outlet'
-                      type='ionicon' 
+                     <Icon name='ios-outlet'         
                       size ={50}
                       />
                      <Body>
@@ -46,11 +54,14 @@ class DeviceScreen extends React.Component {
                        <Text note>total : 2 hr</Text>
                        </Body>
                    </Left>
+                   <Right>
+                      <Switch onValueChange = {this.toggleSwitch}
+                         value = {this.state.switchValue}/>
+                   </Right>
                  </CardItem>
                  <CardItem>
                   <Left>
                      <Icon name='ios-outlet'
-                      type='ionicon' 
                       size ={50}
                       />
                      <Body>
@@ -58,6 +69,10 @@ class DeviceScreen extends React.Component {
                        <Text note>total : 2 hr</Text>
                        </Body>
                    </Left>
+                   <Right>
+                      <Switch onValueChange = {this.toggleSwitch}
+                         value = {this.state.switchValue}/>
+                   </Right>
                  </CardItem>
                </Card>
               </View>
@@ -75,6 +90,5 @@ DeviceScreen.navigationOptions = {
   title: 'Device',
   headerStyle:{
     backgroundColor: '#fff',
-    
   },
 };

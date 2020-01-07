@@ -3,7 +3,6 @@ import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
 
-
 import LoginScreen  from '../screens/LoginScreen';
 import MainTabNavigator from './MainTabNavigator';
 import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
@@ -23,19 +22,18 @@ const MainStack = createStackNavigator({
   Profile :
   {
     screen:ProfileScreen,
-    navigationOptions:navOptionHandler,
   },
   Setting :
   {
     screen:SettingsScreen,
-    navigationOptions:navOptionHandler,
   },
   Plandetail :
   {
     screen:Plandetail,
     navigationOptions:navOptionHandler,
   }
-},{initialRouteName:'Main'}
+},{initialRouteName:'Main',
+  }
 )
 
 

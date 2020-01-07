@@ -34,11 +34,8 @@ class Plandetail extends Component {
           <Body>
             <Title>Plan 1</Title>
           </Body>
-          <Right>
-            <Button transparent>
-              <Icon name='menu' />
-            </Button>
-          </Right>
+          <Right/>
+      
         </Header>
         <Tabs >
           <Tab heading="Room">

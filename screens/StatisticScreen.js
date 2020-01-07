@@ -1,5 +1,4 @@
-import * as WebBrowser from 'expo-web-browser';
-import React from 'react';
+import React, { Component } from 'react';
 import {
   Image,
   Platform,
@@ -10,40 +9,34 @@ import {
   View,
 } from 'react-native';
 import Graph from './Graph';
-export default function StatisticScreen() {
+import { Container, Header, Left, Body, Right, Button, Icon, Title,Tab,Tabs } from 'native-base';
+
+class StatisticScreen extends Component {
+  render() {
     return (
-      <View style={styles.container}>
-        <ScrollView
-          style={styles.container}
-          contentContainerStyle={styles.contentContainer}>
-
-              <View style={styles.StatisticContainner}>
-
-               <Text style = {styles.StatisticText} >StatisticScreen</Text>
-               <View>
-                 <Graph/>
-               </View>
-
-
-              </View>
-        </ScrollView>
-        </View>
+      <Container>
+       <Header hasTabs >
+          <Left>
+            <Button transparent >
+              <Icon name='menu' onPress={()=>this.props.navigation.openDrawer()}>
+              </Icon>
+            </Button>
+          </Left>          
+          <Body>
+            <Title>Statistic</Title>
+          </Body>     
+          <Right></Right>
+        </Header>
+        <Tabs >
+          <Tab heading="Month">
+            <Graph />
+          </Tab>
+          <Tab heading="Device">
+            <Graph/>
+          </Tab>
+        </Tabs>
+      </Container>
     );
+  }
 }
-StatisticScreen.navigationOptions = {
-    title:'Statistic',
-};
-const styles = StyleSheet.create({
-    StatisticContainner :{
-    alignItems: 'center',
-    
-    },
-
-    StatisticText:{
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    textAlign: 'center',
-    }
-
-});
+export default StatisticScreen;
