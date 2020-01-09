@@ -10,7 +10,7 @@ import {
     View,
   } from 'react-native';
 import { Avatar, Card, Paragraph ,IconButton} from 'react-native-paper';
-import { CardItem,Left,Body,Switch, Right, Header, Button, Icon, Title } from 'native-base';
+import { CardItem,Left,Body,Switch, Right, Header, Button, Icon, Title,Container,Content } from 'native-base';
 class DeviceScreen extends React.Component {
   state = {switchValue:true}
   toggleSwitch = (value) => {
@@ -19,39 +19,37 @@ class DeviceScreen extends React.Component {
       //state changes according to switch
       //which will result in re-render the text
    }
-
   render(){
     return (
-      <View style={{flex:1}}>
-       <ScrollView>
+      <Container style={{backgroundColor:'#0A0A3E'}}>      
+        <Header hasTabs style={{backgroundColor:'#373759'}} >
+          <Left>
+            <Button transparent >
+              <Icon name='menu' onPress={()=>this.props.navigation.openDrawer()}
+              style={{color:'#fff'}}>
+              </Icon>
+            </Button>
+          </Left>          
+          <Body>
+            <Title style={{color:'#fff'}}>Device</Title>
+          </Body>     
+          <Right></Right>
+        </Header>
+        <Content >
         <View >
           <View style={{padding:10}} >
-            <Text>Living room</Text>
-            <View style={{padding:10}} >
-            <Card>
-               <CardItem>
+              <Text style={{ fontSize: 18,color: "#fff"}}>Living room</Text>
+            <View style={{padding:10 }} >
+                <Card style={{ backgroundColor: '#373759', borderRadius:20 }}>
+                  <CardItem style={{ backgroundColor: '#373759', borderRadius: 20 }}>
                   <Left>
                      <Icon name='ios-bulb'
                       size ={50}
+                      style={{ color: '#ffa726'}}
                       />
                      <Body>
-                       <Text>Light</Text>
-                       <Text note>total : 4 hr</Text>
-                       </Body>
-                   </Left>
-                   <Right>
-                      <Switch onValueChange = {this.toggleSwitch1}
-                         value = {this.state.switchValue}/>
-                   </Right>
-                 </CardItem>
-                 <CardItem>
-                  <Left>
-                     <Icon name='ios-outlet'         
-                      size ={50}
-                      />
-                     <Body>
-                       <Text>Plug</Text>
-                       <Text note>total : 2 hr</Text>
+                       <Text style={{ color: '#fff'}}>Light</Text>
+                       <Text note style={{ color: '#fff'}}>total : 4 hr</Text>
                        </Body>
                    </Left>
                    <Right>
@@ -59,14 +57,31 @@ class DeviceScreen extends React.Component {
                          value = {this.state.switchValue}/>
                    </Right>
                  </CardItem>
-                 <CardItem>
+                  <CardItem style={{ backgroundColor: '#373759' }}>
                   <Left>
-                     <Icon name='ios-outlet'
+                     <Icon name='ios-outlet'         
                       size ={50}
+                       style={{ color: '#CCFFFF'}}
                       />
                      <Body>
-                       <Text>Plug 2</Text>
-                       <Text note>total : 2 hr</Text>
+                       <Text style={{ color: '#fff'}}>Plug</Text>
+                       <Text note style={{ color: '#fff'}}>total : 2 hr</Text>
+                       </Body>
+                   </Left>
+                   <Right>
+                      <Switch onValueChange = {this.toggleSwitch}
+                         value = {this.state.switchValue}/>
+                   </Right>
+                 </CardItem>
+                  <CardItem style={{ backgroundColor: '#373759', borderRadius: 20 }}>
+                  <Left>
+                     <Icon name='ios-outlet' 
+                      size ={50}
+                       style={{ color: '#CCFFFF'}}
+                      />
+                     <Body>
+                       <Text style={{ color: '#fff'}}>Plug 2</Text>
+                       <Text note style={{ color: '#fff'}}>total : 2 hr</Text>
                        </Body>
                    </Left>
                    <Right>
@@ -79,16 +94,16 @@ class DeviceScreen extends React.Component {
             </View>
 
          </View>
-        </ScrollView>
+        </Content>
        
-       </View>
+       </Container>
    );
   }
 }
 export default DeviceScreen;
 DeviceScreen.navigationOptions = {
-  title: 'Device',
+  title:'Device',
   headerStyle:{
-    backgroundColor: '#fff',
+    backgroundColor: '#0A0A3E',
   },
 };

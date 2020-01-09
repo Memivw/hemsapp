@@ -10,6 +10,8 @@ import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import { SideMenu } from './SideMenu';
 import Plandetail from '../screens/Plandetail';
+import Roomdevice from '../screens/Roomdevice';
+import Setdevice from '../screens/Setdevice';
 const navOptionHandler = (navigation) => ({
   header:null
 })
@@ -22,15 +24,27 @@ const MainStack = createStackNavigator({
   Profile :
   {
     screen:ProfileScreen,
+    navigationOptions: navOptionHandler,
   },
   Setting :
   {
     screen:SettingsScreen,
+    navigationOptions: navOptionHandler,
   },
   Plandetail :
   {
     screen:Plandetail,
     navigationOptions:navOptionHandler,
+  },
+  Roomdevice :
+  {
+    screen: Roomdevice,
+    navigationOptions: navOptionHandler,
+  },
+  Setdevice :
+  {
+    screen: Setdevice,
+    navigationOptions: navOptionHandler,
   }
 },{initialRouteName:'Main',
   }

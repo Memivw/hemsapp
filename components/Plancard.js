@@ -9,7 +9,7 @@ import {
   View,
 } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph ,IconButton} from 'react-native-paper';//npm i react-native-paper
-import { Icon } from 'react-native-elements'
+import { Icon } from 'react-native-elements';
 import { CardItem,Left,Body,Right} from 'native-base';
 export default function Plancard() {
     return (
@@ -33,5 +33,6 @@ export default function Plancard() {
                 </View>
               </Card>
           </View>
+          
   );
 }

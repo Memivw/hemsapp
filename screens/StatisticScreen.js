@@ -15,23 +15,24 @@ class StatisticScreen extends Component {
   render() {
     return (
       <Container>
-       <Header hasTabs >
+       <Header hasTabs style={{backgroundColor:'#373759'}} >
           <Left>
             <Button transparent >
-              <Icon name='menu' onPress={()=>this.props.navigation.openDrawer()}>
+              <Icon name='menu' onPress={()=>this.props.navigation.openDrawer()}
+              style={{color:'#fff'}}>
               </Icon>
             </Button>
           </Left>          
           <Body>
-            <Title>Statistic</Title>
+            <Title style={{color:'#fff'}}>Statistic</Title>
           </Body>     
           <Right></Right>
         </Header>
-        <Tabs >
-          <Tab heading="Month">
+        <Tabs tabBarUnderlineStyle={ {backgroundColor: '#fff' }}>
+          <Tab heading="Month" tabStyle={{backgroundColor: '#373759'}} textStyle={{color: '#fff'}}  activeTabStyle={{backgroundColor: '#373759'}} activeTextStyle={{color: '#fff'}}  >
             <Graph />
           </Tab>
-          <Tab heading="Device">
+          <Tab heading="Device" tabStyle={{backgroundColor: '#373759'}} textStyle={{color: '#fff'}} activeTabStyle={{backgroundColor: '#373759'}} activeTextStyle={{color: '#fff'}}>
             <Graph/>
           </Tab>
         </Tabs>

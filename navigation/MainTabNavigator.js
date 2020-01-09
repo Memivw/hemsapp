@@ -10,7 +10,7 @@ import DeviceScreen from '../screens/DeviceScreen';
 import StatisticScreen from '../screens/StatisticScreen';
 import ProfileScreen from '../screens/ProfileScreen';
 import SettingsScreen from '../screens/SettingsScreen';
-
+import {Icon} from 'native-base';
 const navOptionHandler = (navigation) => ({
   header:null
 })
@@ -20,12 +20,14 @@ const config = Platform.select({
   default: {},
 });
 
-const HomeStack = createStackNavigator(
+const HomeStack = createStackNavigator({
+  Home :
   {
-    Home: HomeScreen,
+    screen: HomeScreen,
+    navigationOptions:navOptionHandler,
   },
-  config
-);
+})
+
 
 HomeStack.navigationOptions = {
   tabBarLabel: 'Home',
@@ -38,12 +40,14 @@ HomeStack.navigationOptions = {
 
 HomeStack.path = '';
 
-const  PlanStack = createStackNavigator(
+const  PlanStack = createStackNavigator({
+  Plan :
   {
-    Plan:  PlanScreen,
+    screen: PlanScreen,
+    navigationOptions:navOptionHandler,
   },
-  config
-);
+})
+
 
 PlanStack.navigationOptions = {
   tabBarLabel: ' Plan',
@@ -54,12 +58,13 @@ PlanStack.navigationOptions = {
 
 PlanStack.path = '';
 
-const DeviceStack = createStackNavigator(
+const DeviceStack = createStackNavigator({
+  Device :
   {
-    Device: DeviceScreen,
+    screen: DeviceScreen,
+    navigationOptions:navOptionHandler,
   },
-  config
-);
+})
 
 DeviceStack.navigationOptions = {
   tabBarLabel: 'Device',
@@ -81,11 +86,11 @@ StatisticStack.navigationOptions = {
   tabBarLabel: 'Statistic',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
-      focused={focused}name={Platform.OS === 'ios' ? 'ios-stats' : 'md-stats'}
+      focused={focused}name={Platform.OS === 'ios' ? 'ios-stats' : 'md-stats'} 
     
     />
   ),
-  header:null,
+  
 };
 
 StatisticStack.path = '';
@@ -94,7 +99,20 @@ const tabNavigator = createBottomTabNavigator({
   PlanStack,
   DeviceStack,
   StatisticStack,
-});
+},{
+  tabBarOptions:{
+    activeTintColor: '#fff',
+    activeBackgroundColor:'#373759',
+    labelStyle: {
+      fontSize: 12,
+    },
+    style: {
+      backgroundColor: '#0A0A3E',
+    },
+  }
+}
+
+);
 
 tabNavigator.path = '';
 
