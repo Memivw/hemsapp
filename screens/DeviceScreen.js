@@ -1,16 +1,13 @@
 import * as React from 'react';
 
 import {
-    Image,
-    Platform,
-    ScrollView,
-    StyleSheet,
     Text,
-    TouchableOpacity,
     View,
   } from 'react-native';
-import { Avatar, Card, Paragraph ,IconButton} from 'react-native-paper';
-import { CardItem,Left,Body,Switch, Right, Header, Button, Icon, Title,Container,Content } from 'native-base';
+import { Card} from 'react-native-paper';
+import { CardItem, Left, Body, Switch, Right, Header, Button, Icon, Title, Container, Content} from 'native-base';
+
+
 class DeviceScreen extends React.Component {
   state = {switchValue:true}
   toggleSwitch = (value) => {
@@ -21,8 +18,8 @@ class DeviceScreen extends React.Component {
    }
   render(){
     return (
-      <Container style={{backgroundColor:'#0A0A3E'}}>      
-        <Header hasTabs style={{backgroundColor:'#373759'}} >
+      <Container style={{backgroundColor:'#152238'}}>      
+        <Header hasTabs style={{ backgroundColor:'#1c2e4a'}} >
           <Left>
             <Button transparent >
               <Icon name='menu' onPress={()=>this.props.navigation.openDrawer()}
@@ -40,8 +37,8 @@ class DeviceScreen extends React.Component {
           <View style={{padding:10}} >
               <Text style={{ fontSize: 18,color: "#fff"}}>Living room</Text>
             <View style={{padding:10 }} >
-                <Card style={{ backgroundColor: '#373759', borderRadius:20 }}>
-                  <CardItem style={{ backgroundColor: '#373759', borderRadius: 20 }}>
+                <Card style={{ backgroundColor: '#1c2e4a', borderRadius:20 }}>
+                  <CardItem style={{ backgroundColor: '#1c2e4a', borderRadius: 20 }}>
                   <Left>
                      <Icon name='ios-bulb'
                       size ={50}
@@ -49,7 +46,11 @@ class DeviceScreen extends React.Component {
                       />
                      <Body>
                        <Text style={{ color: '#fff'}}>Light</Text>
-                       <Text note style={{ color: '#fff'}}>total : 4 hr</Text>
+                        <View style={{ flexDirection: 'row' }}>
+                          <Icon name='md-time' style={{ fontSize: 15, color: '#fff' ,marginTop:3}} />
+                          <Text note style={{ marginLeft: 5, color: '#fff' }}>total : 4 hr</Text>
+                        </View>
+                       
                        </Body>
                    </Left>
                    <Right>
@@ -57,7 +58,7 @@ class DeviceScreen extends React.Component {
                          value = {this.state.switchValue}/>
                    </Right>
                  </CardItem>
-                  <CardItem style={{ backgroundColor: '#373759' }}>
+                  <CardItem style={{ backgroundColor: '#1c2e4a' }}>
                   <Left>
                      <Icon name='ios-outlet'         
                       size ={50}
@@ -65,7 +66,10 @@ class DeviceScreen extends React.Component {
                       />
                      <Body>
                        <Text style={{ color: '#fff'}}>Plug</Text>
-                       <Text note style={{ color: '#fff'}}>total : 2 hr</Text>
+                        <View style={{ flexDirection: 'row' }}>
+                          <Icon name='md-time' style={{ fontSize: 15, color: '#fff', marginTop: 3 }} />
+                          <Text note style={{ marginLeft: 5, color: '#fff' }}>total : 4 hr</Text>
+                        </View>
                        </Body>
                    </Left>
                    <Right>
@@ -73,7 +77,7 @@ class DeviceScreen extends React.Component {
                          value = {this.state.switchValue}/>
                    </Right>
                  </CardItem>
-                  <CardItem style={{ backgroundColor: '#373759', borderRadius: 20 }}>
+                  <CardItem style={{ backgroundColor: '#1c2e4a', borderRadius: 20 }}>
                   <Left>
                      <Icon name='ios-outlet' 
                       size ={50}
@@ -81,7 +85,10 @@ class DeviceScreen extends React.Component {
                       />
                      <Body>
                        <Text style={{ color: '#fff'}}>Plug 2</Text>
-                       <Text note style={{ color: '#fff'}}>total : 2 hr</Text>
+                        <View style={{ flexDirection: 'row' }}>
+                          <Icon name='md-time' style={{ fontSize: 15, color: '#fff', marginTop: 3 }} />
+                          <Text note style={{ marginLeft: 5, color: '#fff' }}>total : 4 hr</Text>
+                        </View>
                        </Body>
                    </Left>
                    <Right>

@@ -1,12 +1,6 @@
 import React, { Component } from 'react';
 import {
-  Image,
-  Platform,
-  ScrollView,
-  StyleSheet,
   Text,
-  TouchableOpacity,
-  View,
 } from 'react-native';
 import { Container, Header, Left, Body, Right, Button, Icon, Title,Tab,Tabs } from 'native-base';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -22,26 +16,26 @@ const  PlanStack = createStackNavigator(
 class Plandetail extends Component {
   render() {
     return (
-      <Container>
-        <Header hasTabs >
+      <Container style={{backgroundColor:'#152238'}}>
+        <Header hasTabs style={{ backgroundColor: '#1c2e4a' }}>
           <Left>
             <Button transparent onPress={()=>this.props.navigation.navigate("Plan")}>
-              <Icon name='arrow-back' >
+              <Icon name='arrow-back' style={{ color: '#fff' }}>
               </Icon>
-              <Text>Back</Text>
+              <Text style={{ color: '#fff' }}>Back</Text>
             </Button>
           </Left>          
           <Body>
-            <Title>Plan 1</Title>
+            <Title style={{ color: '#fff' }} >Plan 1</Title>
           </Body>
           <Right/>
       
         </Header>
-        <Tabs >
-          <Tab heading="Room">
+        <Tabs tabBarUnderlineStyle={{ backgroundColor: '#fff' }} >
+          <Tab heading="Room" tabStyle={{ backgroundColor: '#1c2e4a' }} textStyle={{ color: '#fff' }} activeTabStyle={{ backgroundColor: '#1c2e4a' }} activeTextStyle={{ color: '#fff' }} >
             <Planroom />
           </Tab>
-          <Tab heading="Graph">
+          <Tab heading="Graph" tabStyle={{backgroundColor: '#1c2e4a'}} textStyle={{color: '#fff'}}  activeTabStyle={{backgroundColor: '#1c2e4a'}} activeTextStyle={{color: '#fff'}}>
             <Plangraph/>
           </Tab>
         </Tabs>
@@ -51,6 +45,3 @@ class Plandetail extends Component {
   }
 }
 export default Plandetail;
-Plandetail.navigationOptions = {
-    title: 'Plan 1',
-};

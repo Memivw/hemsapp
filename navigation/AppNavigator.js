@@ -12,10 +12,15 @@ import { SideMenu } from './SideMenu';
 import Plandetail from '../screens/Plandetail';
 import Roomdevice from '../screens/Roomdevice';
 import Setdevice from '../screens/Setdevice';
+import Roomsetting from '../screens/Roomsetting';
 const navOptionHandler = (navigation) => ({
   header:null
 })
 const MainStack = createStackNavigator({
+  Login:{
+    screen:LoginScreen,
+    navigationOptions: navOptionHandler,
+  },
   Main :
   {
     screen: MainTabNavigator,
@@ -44,6 +49,11 @@ const MainStack = createStackNavigator({
   Setdevice :
   {
     screen: Setdevice,
+    navigationOptions: navOptionHandler,
+  },
+  Roomsetting :
+  {
+    screen: Roomsetting,
     navigationOptions: navOptionHandler,
   }
 },{initialRouteName:'Main',

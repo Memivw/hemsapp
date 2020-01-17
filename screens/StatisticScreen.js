@@ -10,12 +10,13 @@ import {
 } from 'react-native';
 import Graph from './Graph';
 import { Container, Header, Left, Body, Right, Button, Icon, Title,Tab,Tabs } from 'native-base';
-
+import Statsmonth from '../screens/Statsmonth';
+import Statsdevice from '../screens/Statsdevice';
 class StatisticScreen extends Component {
   render() {
     return (
       <Container>
-       <Header hasTabs style={{backgroundColor:'#373759'}} >
+        <Header hasTabs style={{ backgroundColor:'#1c2e4a'}} >
           <Left>
             <Button transparent >
               <Icon name='menu' onPress={()=>this.props.navigation.openDrawer()}
@@ -29,11 +30,11 @@ class StatisticScreen extends Component {
           <Right></Right>
         </Header>
         <Tabs tabBarUnderlineStyle={ {backgroundColor: '#fff' }}>
-          <Tab heading="Month" tabStyle={{backgroundColor: '#373759'}} textStyle={{color: '#fff'}}  activeTabStyle={{backgroundColor: '#373759'}} activeTextStyle={{color: '#fff'}}  >
-            <Graph />
+          <Tab heading="Month" tabStyle={{ backgroundColor: '#1c2e4a' }} textStyle={{ color: '#fff' }} activeTabStyle={{ backgroundColor: '#1c2e4a'}} activeTextStyle={{color: '#fff'}}  >
+            <Statsmonth />
           </Tab>
-          <Tab heading="Device" tabStyle={{backgroundColor: '#373759'}} textStyle={{color: '#fff'}} activeTabStyle={{backgroundColor: '#373759'}} activeTextStyle={{color: '#fff'}}>
-            <Graph/>
+          <Tab heading="Device" tabStyle={{ backgroundColor: '#1c2e4a'}} textStyle={{color: '#fff'}} activeTabStyle={{backgroundColor: '#1c2e4a'}} activeTextStyle={{color: '#fff'}}>
+            <Statsdevice/>
           </Tab>
         </Tabs>
       </Container>

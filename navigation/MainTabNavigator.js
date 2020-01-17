@@ -102,12 +102,12 @@ const tabNavigator = createBottomTabNavigator({
 },{
   tabBarOptions:{
     activeTintColor: '#fff',
-    activeBackgroundColor:'#373759',
+    activeBackgroundColor:'#1c2e4a',
     labelStyle: {
       fontSize: 12,
     },
     style: {
-      backgroundColor: '#0A0A3E',
+      backgroundColor: '#152238',
     },
   }
 }

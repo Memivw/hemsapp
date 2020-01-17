@@ -41,8 +41,6 @@ class Setdevice extends Component {
                 </Header>
                 <Content horizontal style={{ marginTop: 5 }}>
                     <Carddevice/>
-                    <Carddevice/>
-                    <Carddevice/>
                 </Content>
                 
             </Container>

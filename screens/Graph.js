@@ -9,11 +9,11 @@ const screenWidth = Dimensions.get("window").width/4*3;
 class Graph extends Component {
     render(){
       return (
-        <View style={{ flex: 1,  justifyContent: 'center', alignItems: 'center' }}>
+        <View style={{ flex: 1,  justifyContent: 'center',alignSelf:'center' }}>
         <LineChart
             data={data}
             width={screenWidth} // from react-native
-            height={250}
+            height={220}
             yAxisLabel={"$"}
             yAxisSuffix={"k"}
             chartConfig={chartConfig}

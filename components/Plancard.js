@@ -9,8 +9,7 @@ import {
   View,
 } from 'react-native';
 import { Avatar, Button, Card, Title, Paragraph ,IconButton} from 'react-native-paper';//npm i react-native-paper
-import { Icon } from 'react-native-elements';
-import { CardItem,Left,Body,Right} from 'native-base';
+import { CardItem,Left,Body,Right,Icon} from 'native-base';
 export default function Plancard() {
     return (
           <View style={{padding:10}} >
@@ -25,7 +24,6 @@ export default function Plancard() {
                         </Left>
                         <Right>
                             <Icon name='ios-leaf'
-                            type='ionicon' 
                             size ={50}
                             />
                         </Right>

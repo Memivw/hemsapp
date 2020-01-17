@@ -10,16 +10,18 @@ import {
   Button,
 } from 'react-native';
 import { render } from 'react-dom';
+import { Icon, Container, Content } from 'native-base';
 class LoginScreen extends Component {
     render(){
         return(
-        <View>
+            <Container>
+        <View style={{alignItems:'center'}}>
             <Text>Login Screen</Text>
             <Button title ="Go to the HomeScreen" 
-            onPress = {()=>this.props.navigation.navigate('MaintabNavigator') } 
+            onPress = {()=>this.props.navigation.navigate('Home') } 
             />
-
         </View>
+        </Container>
          );
     }
 }

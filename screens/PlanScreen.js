@@ -1,22 +1,16 @@
-import React, { Component } from 'react';
+import * as React from 'react';
+
 import {
-  Image,
-  Platform,
-  ScrollView,
-  StyleSheet,
   Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
-import { Avatar, Button, Card, Paragraph, IconButton } from 'react-native-paper';//npm i react-native-paper
-import Plancard from '../components/Plancard';
-import { CardItem, Left, Body, Right, Container, Content, Header, Title, Icon } from 'native-base';
-class PlanScreen extends Component {
+import { Avatar, Card, Paragraph, IconButton } from 'react-native-paper';
+import { CardItem, Left, Body, Switch, Right, Header, Button, Icon, Title, Container, Content } from 'native-base';
+class PlanScreen extends React.Component {
   render() {
     return (
-      <Container style={{ backgroundColor: '#0A0A3E' }}>
-
-        <Header hasTabs style={{ backgroundColor: '#373759' }} >
+      <Container style={{ backgroundColor: '#152238' }}>
+        <Header hasTabs style={{ backgroundColor: '#1c2e4a' }} >
           <Left>
             <Button transparent >
               <Icon name='menu' onPress={() => this.props.navigation.openDrawer()}
@@ -33,11 +27,11 @@ class PlanScreen extends Component {
           <View style={{ padding: 10 }} >
             <Card style={{ elevation: 2 }} >
               <View >
-                <CardItem button onPress={() => { this.props.navigation.navigate('Plandetail') }}>
+                <CardItem button onPress={() => { this.props.navigation.navigate('Plandetail') }} style={{ backgroundColor: '#1c2e4a'}}>
                   <Left>
                     <Body>
-                      <Text>Plan 1</Text>
-                      <Text style={{ color: 'green' }}>save 25%</Text>
+                      <Text style={{ color: '#fff' }}>Plan 1</Text>
+                      <Text style={{ color: "#00CC99" }}>save 25%</Text>
                     </Body>
                   </Left>
                   <Right>
@@ -48,11 +42,9 @@ class PlanScreen extends Component {
             </Card>
           </View>
         </Content>
+
       </Container>
     );
   }
 }
 export default PlanScreen;
-PlanScreen.navigationOptions = {
-  title: 'Plan',
-};
