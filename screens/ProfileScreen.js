@@ -29,7 +29,9 @@ class ProfileScreen extends React.Component {
           </View>
         <View style={{marginTop:30}}>
           <List>
-            <ListItem onPress={() => { this.props.navigation.navigate('Home') }}>
+            <ListItem onPress={() => {this.props.navigation.navigate(
+                                        "Username"
+                                      );  }}>
                 <Left>
                   <Text style={{ color: '#fff'}}>Username</Text>
                 </Left>
@@ -37,7 +39,9 @@ class ProfileScreen extends React.Component {
                   <Icon style={{ color: '#fff'}} name="arrow-forward" />
                 </Right>
             </ListItem>
-            <ListItem onPress={() => { props.navigation.navigate('Plan') }}>
+            <ListItem onPress={() => { this.props.navigation.navigate(
+                                         "ChangePhone"
+                                       ); }}>
                 <Left>
                   <Text style={{ color: '#fff' }}>Phone</Text>
                 </Left>
@@ -45,15 +49,9 @@ class ProfileScreen extends React.Component {
                   <Icon style={{ color: '#fff' }} name="arrow-forward" />
                 </Right>
             </ListItem>
-            <ListItem onPress={() => { props.navigation.navigate('Device') }}>
-                <Left>
-                  <Text style={{ color: '#fff' }}>E-mail</Text>
-                </Left>
-                <Right >
-                  <Icon style={{ color: '#fff' }} name="arrow-forward" />
-                </Right>
-            </ListItem>
-            <ListItem onPress={() => { props.navigation.navigate('Statistic') }}>
+            <ListItem onPress={() => { this.props.navigation.navigate(
+                                         "ChangePassword"
+                                       ); }}>
                 <Left>
                   <Text style={{ color: '#fff' }}>Password</Text>
                 </Left>

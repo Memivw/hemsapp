@@ -13,52 +13,71 @@ import Plandetail from '../screens/Plandetail';
 import Roomdevice from '../screens/Roomdevice';
 import Setdevice from '../screens/Setdevice';
 import Roomsetting from '../screens/Roomsetting';
+import Username from "../screens/Profile/Username";
+import ChangePhone from "../screens/Profile/ChangePhone";
+import ChangePassword from "../screens/Profile/ChangePassword";
+import Notification from "../screens/Setting/Notification";
+import Aboutapp from "../screens/Setting/Aboutapp";
 const navOptionHandler = (navigation) => ({
   header:null
 })
-const MainStack = createStackNavigator({
-  Login:{
-    screen:LoginScreen,
-    navigationOptions: navOptionHandler,
-  },
-  Main :
+const MainStack = createStackNavigator(
   {
-    screen: MainTabNavigator,
-    navigationOptions:navOptionHandler,
+    Login: {
+      screen: LoginScreen,
+      navigationOptions: navOptionHandler
+    },
+    Main: {
+      screen: MainTabNavigator,
+      navigationOptions: navOptionHandler
+    },
+    Profile: {
+      screen: ProfileScreen,
+      navigationOptions: navOptionHandler
+    },
+    Setting: {
+      screen: SettingsScreen,
+      navigationOptions: navOptionHandler
+    },
+    Plandetail: {
+      screen: Plandetail,
+      navigationOptions: navOptionHandler
+    },
+    Roomdevice: {
+      screen: Roomdevice,
+      navigationOptions: navOptionHandler
+    },
+    Setdevice: {
+      screen: Setdevice,
+      navigationOptions: navOptionHandler
+    },
+    Roomsetting: {
+      screen: Roomsetting,
+      navigationOptions: navOptionHandler
+    },
+    Username: {
+      screen: Username,
+      navigationOptions: navOptionHandler
+    },
+    ChangePhone: {
+      screen: ChangePhone,
+      navigationOptions: navOptionHandler
+    },
+    ChangePassword: {
+      screen: ChangePassword,
+      navigationOptions: navOptionHandler
+    },
+    Notification: {
+      screen: Notification,
+      navigationOptions: navOptionHandler
+    },
+    Aboutapp: {
+      screen: Aboutapp,
+      navigationOptions: navOptionHandler
+    }
   },
-  Profile :
-  {
-    screen:ProfileScreen,
-    navigationOptions: navOptionHandler,
-  },
-  Setting :
-  {
-    screen:SettingsScreen,
-    navigationOptions: navOptionHandler,
-  },
-  Plandetail :
-  {
-    screen:Plandetail,
-    navigationOptions:navOptionHandler,
-  },
-  Roomdevice :
-  {
-    screen: Roomdevice,
-    navigationOptions: navOptionHandler,
-  },
-  Setdevice :
-  {
-    screen: Setdevice,
-    navigationOptions: navOptionHandler,
-  },
-  Roomsetting :
-  {
-    screen: Roomsetting,
-    navigationOptions: navOptionHandler,
-  }
-},{initialRouteName:'Main',
-  }
-)
+  { initialRouteName: "Main" }
+);
 
 
 

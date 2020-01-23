@@ -13,7 +13,7 @@ import {
   CardContent,
   Button,
   Content,
-  Icon, Card, View,Title,
+  Icon, Card, View,Title
 } from "native-base";
 import { Dimensions } from "react-native";
 import Graph from './Graph';
@@ -64,7 +64,7 @@ class HomeScreen extends Component {
               </View>
            
             <View style={{ backgroundColor: '#1c2e4a', borderRadius: 16, height: 150, width: Dimensions.get("window").width / 3, marginLeft: 10 }}
-              onStartShouldSetResponder={() => { this.setState({ show: true }) }} >
+              >
 
               <View style={{ alignItems: 'center', marginTop: 20 }}>
                 <Icon active name="bulb" style={{ fontSize: 70, color: "#ffa726" }} />
@@ -74,7 +74,7 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{ backgroundColor: '#1c2e4a', borderRadius: 16, height: 150, width: Dimensions.get("window").width / 3, marginLeft: 10 }}
-              onStartShouldSetResponder={() => { this.setState({ show: true }) }} >
+             >
 
               <View style={{ alignItems: 'center', marginTop: 20 }}>
                 <Icon active name="bulb" style={{ fontSize: 70, color: "#ffa726"}} />
@@ -84,7 +84,7 @@ class HomeScreen extends Component {
             </View>
 
             <View style={{ backgroundColor: '#1c2e4a', borderRadius: 16, height: 150, width: Dimensions.get("window").width / 3, marginLeft: 10 }}
-              onStartShouldSetResponder={() => { this.setState({ show: true }) }} >
+             >
 
               <View style={{ alignItems: 'center', marginTop: 20 }}>
                 <Icon active name="bulb" style={{ fontSize: 70, color: "#ffa726" }} />

@@ -37,7 +37,7 @@ class SettingScreen extends React.Component {
                   <Icon style={{ color: '#fff' }} name="arrow-forward" />
                 </Right>
               </ListItem>
-              <ListItem onPress={() => { this.props.navigation.navigate('Home') }}>
+              <ListItem onPress={() => { this.props.navigation.navigate('Notification') }}>
                 <Left>
                   <Text style={{ color: '#fff' }}>Notifications</Text>
                 </Left>
@@ -45,23 +45,9 @@ class SettingScreen extends React.Component {
                   <Icon style={{ color: '#fff' }} name="arrow-forward" />
                 </Right>
               </ListItem>
-              <ListItem onPress={() => { props.navigation.navigate('Plan') }}>
-                <Left>
-                  <Text style={{ color: '#fff' }}>Location</Text>
-                </Left>
-                <Right >
-                  <Icon style={{ color: '#fff' }} name="arrow-forward" />
-                </Right>
-              </ListItem>
-              <ListItem onPress={() => { props.navigation.navigate('Device') }}>
-                <Left>
-                  <Text style={{ color: '#fff' }}>Personalization and data</Text>
-                </Left>
-                <Right >
-                  <Icon style={{ color: '#fff' }} name="arrow-forward" />
-                </Right>
-              </ListItem>
-              <ListItem onPress={() => { props.navigation.navigate('Statistic') }}>
+              <ListItem onPress={() => { this.props.navigation.navigate(
+                                           "Aboutapp"
+                                         ); }}>
                 <Left>
                   <Text style={{ color: '#fff' }}>About app</Text>
                 </Left>

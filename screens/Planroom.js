@@ -37,7 +37,6 @@ class Planroom extends Component {
               <CardItem style={{ backgroundColor: '#152238' }}>
                   <Left>
                      <Icon name='ios-outlet'
-                      type='ionicon' 
                       size ={50}
                       style={{ color: '#CCFFFF' }}
                       />
